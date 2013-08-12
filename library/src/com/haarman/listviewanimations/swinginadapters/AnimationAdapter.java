@@ -99,14 +99,14 @@ public abstract class AnimationAdapter extends BaseAdapterDecorator {
         return itemView;
     }
 
-    private void animateViewIfNecessary(int position, View view, ViewGroup parent) {
+    protected void animateViewIfNecessary(int position, View view, ViewGroup parent) {
         if (position > mLastAnimatedPosition && !mHasParentAnimationAdapter) {
             animateView(position, parent, view);
             mLastAnimatedPosition = position;
         }
     }
 
-    private void animateView(int position, ViewGroup parent, View view) {
+    protected void animateView(int position, ViewGroup parent, View view) {
         if (mAnimationStartMillis == -1) {
             mAnimationStartMillis = System.currentTimeMillis();
         }
