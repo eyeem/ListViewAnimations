@@ -6,8 +6,8 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 18
-    buildToolsVersion '19.0.1'
+    compileSdkVersion project.ver.compileSdk
+    buildToolsVersion project.ver.buildTools
 
     sourceSets {
         main {
